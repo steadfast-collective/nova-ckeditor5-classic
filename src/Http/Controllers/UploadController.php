@@ -43,7 +43,11 @@ class UploadController extends Controller
             ->findFieldByAttribute($request->field, function () {
                 abort(404);
             });
-
-        return call_user_func($field->discardCallback, $request);
+        
+        try {
+            return call_user_func($field->discardCallback, $request);
+        } catch (\Exception $e) {
+            //
+        }
     }
 }
