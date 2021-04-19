@@ -67,7 +67,8 @@ export default {
                     'ImageCaption',
                     'ImageStyle',
                     'ImageTextAlternate',
-                    'ImageUpload'
+                    'ImageUpload',
+                    'EasyImage',
                 ]
                 editorConfig.image = {}
                 editorConfig.extraPlugins = []
